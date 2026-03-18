@@ -13,11 +13,32 @@
 | ---- | ---- |
 | 项目设计 | `project/PROJECT_DESIGN.md` |
 | 实施计划 | `project/IMPLEMENTATION_PLAN.md` |
+| 设计稿 Prompt | `文档/DramaPipeline_20260318180000_设计稿Prompt.md` |
 | 会话沉淀 | `project/agent.md`（本文件） |
 
 ---
 
 ## 近期会话摘要
+
+### 2026-03-18 18:00（北京时间）- 会话 043
+
+- **用户核心诉求**：根据项目设计文档、实施计划等生成用于出设计稿的 Prompt。
+- **本次修改落地**：新增 `文档/DramaPipeline_20260318180000_设计稿Prompt.md`，含通用设计稿 Prompt、分页面 Prompt（工作台、任务列表、任务详情、通知中心、角色配置）、组件级 Prompt（步骤卡片、状态标签、侧边导航）、配色规范建议。
+- **验证状态**：文件已生成，可直接用于 Figma、AI 设计工具或交付设计师。
+
+---
+
+### 2026-03-18 17:xx（北京时间）- 会话 042
+
+- **用户核心诉求**：将 DramaPipeline 工作区推送到 GitHub 仓库 `https://github.com/Tang200614/DramaPipeline.git`。
+- **本次修改落地**：
+  - 新增 `README.md`：项目简介、文档索引、技术栈规划。
+  - 新增 `.gitignore`：node_modules、dist、.env、IDE、系统文件等通用忽略规则。
+  - 执行 `git init`、`git add .`、`git commit -m "first commit"`、`git branch -M main`、`git remote add origin`。
+- **验证状态**：本地 Git 初始化与提交成功；`git push -u origin main` 因 HTTPS 认证失败（需用户配置凭据）。
+- **新发现与规则沉淀**：推送前需完成 GitHub 认证（SSH 密钥或 Personal Access Token）。
+
+---
 
 ### 2026-03-18 17:xx（北京时间）- 会话 041
 
@@ -62,16 +83,3 @@
 - **本次修改落地**：重写 db.go、mapper 层；tasks、dispatch_records、registry、worktrees 表；modernc.org/sqlite。
 
 ---
-
-## 历史会话（简要）
-
-- **会话 001-006**：Git 初始化、Vue+Go 技术栈、V0.1 任务链路、LangGraph 编排、中文规范。
-- **会话 007-016**：imai-work 前端替换、侧边栏菜单、通义对话、Cursor/Trae/Antigravity 发送。
-- **会话 017-032**：IDE 智能分配、分配记录、open-project、zeroclaw 集成、MongoDB 持久化。
-- **会话 033-038**：面试回答汇总、Go/Python/Node 基础知识、模型拆解、SQLite 迁移。
-
----
-
-## 完整历史
-
-完整会话历史请查看：`FortuneClaw/docs/agent.md`
