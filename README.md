@@ -18,12 +18,24 @@
 | IMPLEMENTATION_PLAN.md | 实施计划       |
 | agent.md   | 会话沉淀与开发记忆 |
 
-## 技术栈（规划中）
+## 技术栈
 
-- Web：React + Tailwind（控制台基底）
-- 流水线：10 个 Agent 角色（剧本分析、AI 导演、分镜设计、视频生成等）
+- **前端**：Vue 3 + Vite + Tailwind（参考 zeroclaw 控制台风格）
+- **后端**：Flask Python
+- **流水线**：10 个 Agent 角色（剧本分析、AI 导演、分镜设计、视频生成等）
+
+## 本地启动
+
+1. **环境变量**：复制 `.env.example` 为 `.env`，配置 `DASHSCOPE_API_KEY` 等
+2. **后端**：`cd backend && python3 run.py`（默认端口 5001）
+3. **前端**：`cd frontend && npm run dev`（默认端口 5173）
+4. 访问 http://127.0.0.1:5175（macOS 上 localhost 可能被 AirPlay 占用导致 403，请用 127.0.0.1）
+
+## 参考项目
+
+- `references/zeroclaw`：zeroclaw 控制台 UI 参考（已克隆）
 
 ---
 
-@author 举顾（technology@yiju.net）  
+@author fortune  
 @date 2026-03-18

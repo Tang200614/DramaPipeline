@@ -34,3 +34,9 @@ Thumbs.db
 tmp/
 temp/
 .cache/
+
+# 参考项目（zeroclaw 等，体积较大）
+references/
+
+# SQLite 数据库
+*.db

@@ -1,0 +1,19 @@
+# DramaPipeline 后端依赖
+# @author fortune
+# @date 2026-03-18 21:55:00
+
+# Web 框架
+flask>=3.0.0
+flask-cors>=4.0.0
+
+# 环境变量
+python-dotenv>=1.0.0
+
+# 通义千问 API（可选，用于 AI 能力）
+requests>=2.31.0
+
+# LangChain + LangGraph（流式对话、prompt 解析、模型适配，便于微调）
+langchain>=0.3.0
+langchain-community>=0.3.0
+langgraph>=0.2.0
+dashscope>=1.20.0

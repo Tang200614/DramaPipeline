@@ -1,0 +1,14 @@
+<!-- 流水线列表 - 占位页 -->
+<!-- @author fortune -->
+<!-- @date 2026-03-18 21:55:00 -->
+
+<template>
+  <div class="p-6 animate-fade-in">
+    <div class="glass-card p-8 text-center">
+      <h2 class="text-lg font-semibold mb-2 text-[var(--dp-text-primary)]">流水线</h2>
+      <p class="text-sm text-[var(--dp-text-muted)]">
+        流水线管理功能开发中，敬请期待。
+      </p>
+    </div>
+  </div>
+</template>
