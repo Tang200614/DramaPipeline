@@ -1,6 +1,6 @@
 # DramaPipeline 会话沉淀 (docs/agent.md)
 
-> @author 举顾（technology@yiju.net）
+> @author fortune
 > @date 2026-03-18
 
 ---
@@ -12,6 +12,8 @@
 | 项目设计 | `project/PROJECT_DESIGN.md` |
 | 实施计划 | `project/IMPLEMENTATION_PLAN.md` |
 | 设计稿 Prompt | `文档/DramaPipeline_20260318180000_设计稿Prompt.md` |
+| 前端需求与结构设计 | `文档/DramaPipeline_20260319000000_前端需求分析与结构设计.md` |
+| Stitch UI 设计稿 Prompt | `文档/DramaPipeline_Stitch_UI设计稿Prompt.md` |
 | 会话沉淀 | `docs/agent.md`（本文件） |
 
 ---
@@ -26,6 +28,17 @@
 ---
 
 ## 近期会话
+
+### 2026-03-19 - Stitch UI 设计稿 Prompt
+
+- **产出**：`文档/DramaPipeline_Stitch_UI设计稿Prompt.md`，汇总 7 份文档的需求与设计，可直接复制到 Stitch 生成 UI 设计稿
+- **内容**：需求摘要、完整 Prompt（导航、三块式流水线、状态、配色）、分页面 Prompt
+
+### 2026-03-19 00:00+ - 前端需求分析与结构设计（按草图定稿）
+
+- **需求**：多剧本并行、剧本/大纲输入、素材 zip/rar/图片、自定义角色、剧本切片→分镜、剧本量/拼接字数/匹配章节配置、用户剧本作为知识库
+- **布局**：三块式草图在 **流水线页面** `/pipelines` 中——顶部剧本选择 + 左侧角色流转 + 右侧角色会话与处理进度
+- **产出**：`文档/DramaPipeline_20260319000000_前端需求分析与结构设计.md`，含布局、样式、组件清单、实施优先级（前端先行 Mock）
 
 ### 2026-03-18 23:30+ - 流式结束标记
 

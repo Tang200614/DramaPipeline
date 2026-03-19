@@ -2,7 +2,7 @@
 
 > 用于 Figma、AI 设计工具或设计师的 UI 设计稿生成指令
 >
-> @author 举顾（technology@yiju.net）
+> @author fortune
 > @date 2026-03-18 18:00:00
 
 ---

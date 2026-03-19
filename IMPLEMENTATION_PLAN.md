@@ -2,7 +2,7 @@
 
 > 基于 FortuneClaw 与 zeroclaw 的迁移与改造计划
 >
-> @author 举顾（technology@yiju.net）
+> @author fortune
 > @date 2026-03-18
 
 ---

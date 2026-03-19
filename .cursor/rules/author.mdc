@@ -1,0 +1,9 @@
+---
+description: 项目注释作者规范，使用 fortune 作为 @author
+alwaysApply: true
+---
+
+# 作者规范
+
+- 所有文件注释中的 `@author` 使用 **fortune**，不要使用 举顾 或 technology@yiju.net
+- 示例：`@author fortune`

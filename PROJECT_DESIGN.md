@@ -2,7 +2,7 @@
 
 > 工业级短剧生成工具 | 专业级 / 企业级用户 | 控制台式 Web 平台
 >
-> @author 举顾（technology@yiju.net）
+> @author fortune
 > @date 2026-03-18
 
 ---

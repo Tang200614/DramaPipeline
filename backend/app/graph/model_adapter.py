@@ -1,5 +1,5 @@
 # 模型适配层：统一 ChatModel 获取，便于接入通义、微调模型等
-# @author 举顾（technology@yiju.net）
+# @author fortune
 # @date 2026-03-18 22:00:00
 
 import os

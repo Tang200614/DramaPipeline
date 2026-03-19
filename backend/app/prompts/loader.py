@@ -1,6 +1,6 @@
 # prompt 模板加载与变量解析
 # 支持 {{variable}} 格式占位符，便于自定义 prompt 与微调场景
-# @author 举顾（technology@yiju.net）
+# @author fortune
 # @date 2026-03-18 22:00:00
 
 import os

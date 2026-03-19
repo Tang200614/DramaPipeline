@@ -1,5 +1,5 @@
 # LangGraph 对话流程图：支持流式 token、prompt 模板、模型适配
-# @author 举顾（technology@yiju.net）
+# @author fortune
 # @date 2026-03-18 22:00:00
 
 import logging
