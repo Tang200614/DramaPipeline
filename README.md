@@ -14,8 +14,8 @@
 
 | 文档       | 说明           |
 | ---------- | -------------- |
-| PROJECT_DESIGN.md | 项目设计文档   |
-| IMPLEMENTATION_PLAN.md | 实施计划       |
+| docs/项目设计.md | 项目设计文档   |
+| docs/实施计划.md | 实施计划       |
 | agent.md   | 会话沉淀与开发记忆 |
 
 ## 技术栈

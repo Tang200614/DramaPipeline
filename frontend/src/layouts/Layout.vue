@@ -13,7 +13,18 @@
     <div class="ml-60 flex flex-col min-h-screen">
       <Header />
       <main class="flex-1 overflow-y-auto">
-        <router-view />
+        <router-view v-slot="{ Component }">
+          <transition
+            name="page-fade"
+            mode="out-in"
+          >
+            <component
+              v-if="Component"
+              :is="Component"
+              :key="$route.path"
+            />
+          </transition>
+        </router-view>
       </main>
     </div>
   </div>

@@ -16,3 +16,7 @@
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+// 系统设置占位页
+</script>

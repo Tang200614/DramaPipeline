@@ -178,3 +178,78 @@ body {
 [data-theme="light"] .sidebar-glow-line {
   background: linear-gradient(180deg, transparent, rgba(0, 128, 255, 0.2), transparent);
 }
+
+/* 页面流转过渡 */
+.page-fade-enter-active,
+.page-fade-leave-active {
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.page-fade-enter-from {
+  opacity: 0;
+  transform: translateX(12px);
+}
+
+.page-fade-leave-to {
+  opacity: 0;
+  transform: translateX(-8px);
+}
+
+/* 预览面板从右侧弹出 */
+.preview-slide-enter-active {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease;
+}
+
+.preview-slide-leave-active {
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease;
+}
+
+.preview-slide-enter-from {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.preview-slide-leave-to {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+/* 预览右面板：从右往左滑入（本次产物） */
+.preview-panel-right-enter-active {
+  transition: transform 0.35s cubic-bezier(0.32, 0.72, 0, 1), opacity 0.3s ease;
+  will-change: transform;
+}
+
+.preview-panel-right-leave-active {
+  transition: transform 0.28s cubic-bezier(0.32, 0.72, 0, 1), opacity 0.25s ease;
+  will-change: transform;
+}
+
+.preview-panel-right-enter-from {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+.preview-panel-right-leave-to {
+  transform: translateX(100%);
+  opacity: 0;
+}
+
+/* 预览抽屉：仅右侧产物从右滑入 */
+.preview-drawer-enter-active {
+  transition: transform 0.35s cubic-bezier(0.32, 0.72, 0, 1);
+  will-change: transform;
+}
+
+.preview-drawer-leave-active {
+  transition: transform 0.28s cubic-bezier(0.32, 0.72, 0, 1);
+  will-change: transform;
+}
+
+.preview-drawer-enter-from {
+  transform: translateX(100%);
+}
+
+.preview-drawer-leave-to {
+  transform: translateX(100%);
+}

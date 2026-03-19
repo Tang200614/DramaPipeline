@@ -9,12 +9,14 @@
 
 | 文档 | 路径 |
 | ---- | ---- |
-| 项目设计 | `project/PROJECT_DESIGN.md` |
-| 实施计划 | `project/IMPLEMENTATION_PLAN.md` |
-| 设计稿 Prompt | `文档/DramaPipeline_20260318180000_设计稿Prompt.md` |
-| 前端需求与结构设计 | `文档/DramaPipeline_20260319000000_前端需求分析与结构设计.md` |
-| Stitch UI 设计稿 Prompt | `文档/DramaPipeline_Stitch_UI设计稿Prompt.md` |
+| 项目设计 | `docs/项目设计.md` |
+| 实施计划 | `docs/实施计划.md` |
+| 设计稿 Prompt | `docs/设计稿Prompt.md` |
+| Stitch 设计稿 Prompt | `docs/Stitch设计稿Prompt.md` |
+| 前端需求与结构设计 | `docs/前端需求与结构设计.md` |
+| 交互设计 | `docs/交互设计.md` |
 | 会话沉淀 | `docs/agent.md`（本文件） |
+| FortuneClaw 历史 | `docs/archive/FortuneClaw/` |
 
 ---
 
@@ -28,6 +30,38 @@
 ---
 
 ## 近期会话
+
+### 2026-03-19 - 历史人物视频 Workflow（大模型可解析）
+
+- **诉求**：让大模型理解何时调用该工作流，纯文本、换行分隔节点，不记录 md
+- **产出**：`backend/app/prompts/historical_figure_video_workflow.txt`，含触发条件（一句话历史人物/主题生成视频）+ 5 节点（web_search、script_writing、storyboard_slice、text_to_image、image_to_video）
+
+### 2026-03-19 - 文档整理与交互设计
+
+- **文档重命名**：设计稿Prompt、Stitch设计稿Prompt、前端需求与结构设计、项目设计、实施计划，统一为语义化名称
+- **FortuneClaw 归档**：`docs/archive/FortuneClaw/` 存放历史文档
+- **交互设计**：新增 `docs/交互设计.md`，含导航流转、流水线/任务列表交互、状态反馈、动效规范、响应式
+- **索引更新**：agent.md 文档索引指向新路径；README、项目设计、实施计划内链同步
+
+### 2026-03-19 - 过渡动画
+
+- **页面流转**：Layout 中 router-view 使用 Transition（page-fade），路由切换时淡入 + 轻微位移
+- **预览面板**：左侧分析助手始终存在；点击「预览」时，右侧产物弹窗用 `Transition name="preview-drawer"` 从右滑入，左侧 `preview-left-panel` 通过 `has-preview` 类缩小（flex 过渡）
+- **样式**：`index.css` 定义 `preview-drawer-enter/leave`；`pipeline-content-wrapper.has-preview` 控制 gap 与左侧 flex 收缩
+
+### 2026-03-19 - 页面组件化与目录结构
+
+- **目录结构**：各页面改为 `视图名/index.vue`（Chat、Config、Dashboard、Tasks、Pipelines）
+- **Pipelines 组件化**：ScriptSelector、RoleSidebar、OutputPreview 抽至 `Pipelines/components/`
+- **路由**：main.ts 指向 `views/xxx/index.vue`，删除原单文件 .vue
+
+### 2026-03-19 - 流水线页面实现
+
+- **Pipelines.vue**：按设计稿实现三块式布局——顶部剧本选择 + 左侧 10 角色流转 + 右侧角色会话与操作
+- **Mock 数据**：3 个剧本、10 角色（前 2 已完成、第 3 进行中、其余待执行）、Agent 消息、片段卡片
+- **组件**：剧本下拉、流水线运行中 badge、角色列表（状态徽章）、任务头、历史/预览、回退/重做、确认并分发
+- **预览模式**：点击「预览」切换双框——左框（Agent 消息、片段、回退/重做）、右框（本次产物，按角色类型：文字/分镜1-N/图片1-N/视频）
+- **视频生成**：视频生成助手时，右框展示「选择分镜图片（素材）」+「分镜文本（Prompt）」+ 生成视频按钮；选择分镜时自动填入 prompt
 
 ### 2026-03-19 - Stitch UI 设计稿 Prompt
 
